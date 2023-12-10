@@ -1,0 +1,95 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="stylesheet" href="{{ url_for('static', path='css/admin.css') }}">
+  <script src="{{ url_for('static', path='js/admin.js') }}"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+  <title>Process manager</title>
+</head>
+<body>
+  <div class="main_body">
+    <div class="h1_header">
+      <h1>Admin panel</h1>
+    </div>
+    <div class="button_header">
+      <div class="buttons">
+        <button class="button" id="restart-failed">Restart failed</button>
+        <button class="button" id="add-process">Add process</button>
+        <button class="button" id="delete-process">Delete process</button>
+        <button class="button" id="refresh-all">Refresh all</button>
+        <button class="button" id="stop-all">Stop all</button>
+      </div>
+      <button class="button logout" id="logout">Logout</button>
+    </div>
+    <div class="table">
+      <table>
+        <tr class="table_headers">
+          <th>status</th>
+          <th>PID</th>
+          <th >uptime</th>
+          <th>name</th>
+          <th>group</th>
+          <th>Action</th>
+          <th>updating</th>
+        </tr>
+
+
+
+        {% for process in processes %}
+
+        <tr id="process">
+          <td>
+            <span class="status" id="process_status">{{ process.is_failed }}</span>
+          </td>
+          <td>
+            <span id="process_pid">{{ process.pid }}</span>
+          </td>
+          <td>
+            <span id="process_uptime">{{ process.uptime }}</span>
+          </td>
+          <td>
+            <span id="process_name">{{ process.name }}</span>
+          </td>
+          <td>
+            <span id="process_group">{{ process.group }}</span>
+          </td>
+          <td>
+            <div class="action_in_tables">
+              <button id="restart-process">Restart</button>
+              <button id="stop-process">Stop</button>
+              <button id="clear-log-process">Clear logs</button>
+              <button id="show-logs-button">Show logs</button>
+            </div>
+          </td>
+
+          <td>
+            <label class="switch">
+              <input type="checkbox" id="process_updatе">
+              <span class="slider"></span>
+            </label>
+          </td>
+        </tr>
+
+        <tr class="logs_row">
+          <td colspan="7">
+            <div class="logs_text">{{ process.logs }}</div>
+          </td>
+        </tr>
+
+        {% endfor %}
+
+        
+      </table>
+    </div>  
+  </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+* {
+    text-emphasis-color: #374046;
+    font-family: 'Roboto';
+
+}
+
+body {
+
+    padding: 0px;
+    margin: 0px;
+
+    width: 100%;
+    height: 100%;
+    align-items:flex-start;
+}
+
+/* Headers */
+
+.h1_header {
+    margin-top: 20px;
+}
+
+.button_header{
+    display: flex;
+    justify-content: space-between;
+
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+
+/* Bodys */
+
+.main_body {
+    width: 60%;
+}
+
+
+body {
+    background-color: #fffff4;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-self: center;
+}
+
+.button {
+    background-color: #e6e6e6;
+    border: 2px solid #919191;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+}
+  
+.button:hover {
+    background-color: #bdbdbd;
+}
+  
+.button:active {
+    background-color: #757575;
+}
+  
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    
+}
+/* table */
+
+table, th, td {
+    border: 2px solid #919191;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    height: 40px;
+}
+
+#process_name {
+    padding-left: 10px;
+}
+
+
+
+#delete_from_db, #delete_from_systemd {
+    text-align: center;
+}
+
+
+
+.table{
+    margin-top: 20px;
+
+    margin-bottom: 40px;
+}
+
+.table_headers {
+    background-color: #d3d3d3;
+}
+  
+  
+  
+
+
+/* ... (chat gpt styles) ... */
+
+.switch {
+
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(128, 47, 0);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(128, 47, 0);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}

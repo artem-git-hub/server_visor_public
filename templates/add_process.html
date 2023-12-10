@@ -1,0 +1,47 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="stylesheet" href="{{ url_for('static', path='css/add_process.css') }}">
+  <script src="{{ url_for('static', path='js/add_process.js') }}"></script>
+
+
+  <!-- <link rel="stylesheet" href="../static/css/add_process.css">
+  <script src="../static/js/add_process.js" ></script> -->
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+  <title>Add process</title>
+</head>
+<body>
+  <div class="main_body">
+    <div class="h1_header">
+      <h1>Add process</h1>
+    </div>
+    <div class="input_form">
+        <form method="post">
+          <input type="text" name="process_name" id="process_name" placeholder="Name of process: bot_1 - ok | bot_1.service - NOT ok">
+          <input type="text" name="process_group" id="process_group" placeholder="Group of process">
+          <div class="slider_and_text">
+            <span id="text_for_slider">To create additional .service file</span>
+            <label class="switch">
+              <input type="checkbox" id="add_service_file">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <textarea name="dataservice" id="content_service" cols="30" rows="10" placeholder="content of .service file" class="content_service"></textarea>
+          <div class="buttons">
+            <input type="submit" value="Back" class="button" id="back">
+            <input type="submit" value="Create" class="button"  id="create">
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+*__pycache__/
+venv/
+services/db/database.sqlite
+*.env
