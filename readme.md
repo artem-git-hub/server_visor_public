@@ -20,7 +20,7 @@
 ## Запуск
 1) установите python и клонируйте репозиторий
 2) Запишите соль для cookie и пароля в .env файл  
-a. Соли создаются командой bash: `openssl rand -hex 32`
+a. Соли создаются командой bash: `openssl rand -hex 32`  
 b. Запишите соли в .env:  
 ```env
 COOKIE_SALT=aeae6cd09984f5c19b9bfd9f61cf7e7354c6d34e3dce225d35f6315a300e1c57
@@ -41,14 +41,14 @@ python -m venv venv
 source ./venv/bin/activate
 ```
 
-4) Установите зависимости в виртуальное окружение:
+4) Установите зависимости в виртуальное окружение:  
 ```bash
 pip install -r requirements.txt
 ```
 
-5) Запустите проект:
+5) Запустите проект:  
 ```shell
 uvicorn server:app --reload --port 8000
 ```
 
-6) Перейдите по ссылке: http://localhost:8000/admin
+6) Перейдите по ссылке: http://localhost:8000/admin  
